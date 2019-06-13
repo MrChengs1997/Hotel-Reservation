@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.HouseMapper">
+     <select id="findUserById" parameterType="int" resultType="com.pojo.House">
+           SELECT * FROM house WHERE id=#{value}
+     </select>
+     
+     <select id="AllHouse"  resultType="com.pojo.House">
+     	select * from house
+     </select>
+     
+
+     
+</mapper>

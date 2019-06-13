@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd">
+
+
+<context:component-scan base-package="com.controller"></context:component-scan>
+
+<mvc:default-servlet-handler />
+
+	<bean id="formattingConversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+  <property name="formatters">
+     <set>
+          <bean class="com.formatter.DateFormatter"></bean>
+     </set>
+  </property>
+</bean>
+<mvc:annotation-driven conversion-service="formattingConversionService"></mvc:annotation-driven>
+
+
+
+<mvc:resources location="/WEB-INF/images/" mapping="/images/**"></mvc:resources>
+<mvc:resources location="/WEB-INF/css/" mapping="/css/**"></mvc:resources>
+<mvc:resources location="/WEB-INF/fonts/" mapping="/fonts/**"></mvc:resources>
+<mvc:resources location="/WEB-INF/js/" mapping="/js/**"></mvc:resources>
+
+<mvc:resources location="/WEB-INF/revolution/" mapping="/revolution/**"></mvc:resources>
+
+
+<!-- 配置视图解析器 -->
+<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	<property name="prefix" value="/WEB-INF/views/"></property>
+	<property name="suffix" value=".jsp"></property>
+</bean>
+
+
+<!-- 文件上传 -->
+<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+	 <property name="maxUploadSize" value="104857600"/>
+        <property name="maxInMemorySize" value="4096"/>
+</bean>
+	
+</beans>

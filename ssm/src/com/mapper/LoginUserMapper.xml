@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.LoginUserMapper">
+
+	<select id="LoginByName" parameterType="string" resultType="int">
+		SELECT count(*) FROM USER WHERE username=#{username} and password=#{password};
+	</select>
+	
+	<select id="getUser" parameterType="string" resultType="com.pojo.User">
+	    SELECT * FROM USER WHERE username=#{value}
+	</select>
+	
+		<insert id="toLogin" >
+		insert into user(username,password,phone,age,sex) 
+		values(#{username},#{password},#{phone},#{age},#{sex})
+	</insert>
+
+	<select id="getShowUser" parameterType="int" resultType="com.pojo.User">
+		SELECT * FROM USER WHERE userid=#{value}
+	</select>
+	
+	
+	<update id="updateUser" parameterType="com.pojo.User">
+			 update user set username=#{username},password=#{password},phone=#{phone},age=#{age},sex=#{sex} where
+			  userid  = #{userid}
+		
+	</update>
+
+</mapper>

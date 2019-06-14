@@ -68,7 +68,16 @@ CREATE TABLE `user` (
 
 ## 页面展示
 
-![Image text](https://github.com/MrChengs1997/Hotel-Reservation/blob/master/ssm/WebRoot/WEB-INF/images/blog/blog_post1.jpg)
-
-
-
+<b>登陆页面</b>
+![Image text](https://github.com/MrChengs1997/Hotel-Reservation/blob/master/images/login.png)
+<b>注册页面</b>
+![Image text](https://github.com/MrChengs1997/Hotel-Reservation/blob/master/images/register.png)
+<b>首页</b>
+![Image text](https://github.com/MrChengs1997/Hotel-Reservation/blob/master/images/index1.png)
+![Image text](https://github.com/MrChengs1997/Hotel-Reservation/blob/master/images/index2.png)
+<b>个人中心</b>
+![Image text](https://github.com/MrChengs1997/Hotel-Reservation/blob/master/images/msg.png)
+<b>房间列表</b>
+![Image text](https://github.com/MrChengs1997/Hotel-Reservation/blob/master/images/list.png)
+<b>预定页面</b>
+![Image text](https://github.com/MrChengs1997/Hotel-Reservation/blob/master/images/booking.png)

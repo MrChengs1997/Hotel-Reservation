@@ -65,3 +65,10 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 ```
+
+## 页面展示
+
+![Image text](https://github.com/MrChengs1997/Hotel-Reservation/blob/master/ssm/WebRoot/WEB-INF/images/blog/blog_post1.jpg)
+
+
+
